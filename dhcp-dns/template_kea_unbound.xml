@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<pfsense>
+	<version>23.4</version>
+	<dhcpd>
+		<lan>
+			<enable></enable>
+			<range>
+				<from>10.0.0.100</from>
+				<to>10.0.0.250</to>
+			</range>
+			<dnsserver>10.0.0.1</dnsserver>
+			<gateway>10.0.0.1</gateway>
+			<defaultleasetime>7200</defaultleasetime>
+			<maxleasetime>86400</maxleasetime>
+			<netmask></netmask>
+			<failover_peerip></failover_peerip>
+		</lan>
+	</dhcpd>
+	<unbound>
+		<enable></enable>
+		<dnssec></dnssec>
+		<active_interface>all</active_interface>
+		<outgoing_interface>all</outgoing_interface>
+		<custom_options>server:&#10;  qname-minimization: yes&#10;  harden-glue: yes&#10;  harden-dnssec-data: yes</custom_options>
+		<forwarding></forwarding>
+		<regdhcp></regdhcp>
+		<regdhcpstatic></regdhcpstatic>
+	</unbound>
+</pfsense>

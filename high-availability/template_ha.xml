@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<pfsense>
+	<version>23.4</version>
+	<virtualip>
+		<vip>
+			<mode>carp</mode>
+			<interface>wan</interface>
+			<vhid>1</vhid>
+			<advskew>0</advskew>
+			<advbase>1</advbase>
+			<password>pfsense_ha_secret</password>
+			<subnet>200.1.1.1</subnet>
+			<subnet_bits>24</subnet_bits>
+			<descr><![CDATA[WAN Virtual IP (CARP)]]></descr>
+		</vip>
+	</virtualip>
+	<hasync>
+		<pfsyncenabled>on</pfsyncenabled>
+		<pfsyncpeerip>172.16.0.2</pfsyncpeerip>
+		<pfsyncinterface>sync</pfsyncinterface>
+		<synchronizestats></synchronizestats>
+	</hasync>
+</pfsense>

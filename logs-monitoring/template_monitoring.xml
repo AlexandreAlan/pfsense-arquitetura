@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<pfsense>
+	<version>23.4</version>
+	<telegraf>
+		<config>
+			<enable>on</enable>
+			<influxdb_enable>on</influxdb_enable>
+			<influxdb_url>http://10.0.0.50:8086</influxdb_url>
+			<influxdb_token><REDACTED></influxdb_token>
+		</config>
+	</telegraf>
+	<syslog>
+		<remoteserver>10.0.0.50</remoteserver>
+		<remoteport>514</remoteport>
+		<remoteprotocol>udp</remoteprotocol>
+	</syslog>
+</pfsense>

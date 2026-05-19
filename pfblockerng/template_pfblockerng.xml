@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<pfsense>
+	<version>23.4</version>
+	<pfblockerng>
+		<config>
+			<enable>on</enable>
+			<keep_settings>on</keep_settings>
+			<dnsbl_enable>on</dnsbl_enable>
+			<dnsbl_vip>10.10.10.1</dnsbl_vip>
+			<dnsbl_port>8081</dnsbl_port>
+			<dnsbl_ssl_port>8443</dnsbl_ssl_port>
+		</config>
+	</pfblockerng>
+</pfsense>

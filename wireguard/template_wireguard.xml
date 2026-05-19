@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<pfsense>
+	<version>23.4</version>
+	<wireguard>
+		<tunnel>
+			<name>tun_wg0</name>
+			<interface>wg0</interface>
+			<listenport>51820</listenport>
+			<privatekey><REDACTED></privatekey>
+			<publickey><REDACTED></publickey>
+			<mtu>1420</mtu>
+			<descr><![CDATA[WireGuard Main Tunnel]]></descr>
+		</tunnel>
+	</wireguard>
+</pfsense>

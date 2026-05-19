@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<pfsense>
+	<version>23.4</version>
+	<dnshaper>
+		<queue>
+			<name>Download_FQCoDel</name>
+			<number>1</number>
+			<bandwidth>
+				<item>
+					<bw>950</bw>
+					<bwunit>Mb</bwunit>
+				</item>
+			</bandwidth>
+			<sched>fq_codel</sched>
+		</queue>
+		<queue>
+			<name>Upload_FQCoDel</name>
+			<number>2</number>
+			<bandwidth>
+				<item>
+					<bw>950</bw>
+					<bwunit>Mb</bwunit>
+				</item>
+			</bandwidth>
+			<sched>fq_codel</sched>
+		</queue>
+	</dnshaper>
+</pfsense>

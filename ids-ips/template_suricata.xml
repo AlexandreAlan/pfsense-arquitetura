@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<pfsense>
+	<version>23.4</version>
+	<suricata>
+		<config>
+			<enable_netmap>on</enable_netmap>
+			<rule_update_policy>on</rule_update_policy>
+		</config>
+		<interface>
+			<name>wan</name>
+			<enable>on</enable>
+			<ips_mode>inline</ips_mode>
+			<blockoffenders>on</blockoffenders>
+		</interface>
+	</suricata>
+</pfsense>

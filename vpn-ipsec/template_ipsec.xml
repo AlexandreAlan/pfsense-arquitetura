@@ -1,0 +1,33 @@
+<?xml version="1.0"?>
+<pfsense>
+	<version>23.4</version>
+	<ipsec>
+		<phase1>
+			<ikeid>1</ikeid>
+			<interface>wan</interface>
+			<remote-gateway>200.2.2.2</remote-gateway>
+			<protocol>inet</protocol>
+			<iketype>ikev2</iketype>
+			<encryption-algorithm>
+				<name>aes</name>
+				<keylen>256</keylen>
+			</encryption-algorithm>
+			<hash-algorithm>sha256</hash-algorithm>
+			<dhgroup>14</dhgroup>
+			<lifetime>28800</lifetime>
+			<descr><![CDATA[IPsec VTI Phase 1 to Cloud]]></descr>
+		</phase1>
+		<phase2>
+			<ikeid>1</ikeid>
+			<mode>vti</mode>
+			<protocol>esp</protocol>
+			<encryption-algorithm-option>
+				<name>aes256gcm</name>
+				<keylen>128</keylen>
+			</encryption-algorithm-option>
+			<pfsgroup>0</pfsgroup>
+			<lifetime>3600</lifetime>
+			<descr><![CDATA[IPsec VTI Phase 2]]></descr>
+		</phase2>
+	</ipsec>
+</pfsense>

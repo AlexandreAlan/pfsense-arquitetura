@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<pfsense>
+	<version>23.4</version>
+	<gateways>
+		<gateway_item>
+			<interface>wan</interface>
+			<gateway>dynamic</gateway>
+			<name>WAN_DHCP</name>
+			<weight>1</weight>
+			<ipproto>inet</ipproto>
+			<monitor>1.1.1.1</monitor>
+			<descr><![CDATA[Primary Fiber Link]]></descr>
+		</gateway_item>
+		<gateway_group>
+			<name>GW_FAILOVER</name>
+			<item>WAN_DHCP|tier1</item>
+			<item>OPT1_DHCP|tier2</item>
+			<trigger>down</trigger>
+			<descr><![CDATA[WAN Failover Group]]></descr>
+		</gateway_group>
+	</gateways>
+	<staticroutes></staticroutes>
+</pfsense>

@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<pfsense>
+	<version>23.4</version>
+	<haproxy>
+		<config>
+			<global_maxconn>1000</global_maxconn>
+			<global_nbproc>1</global_nbproc>
+			<stats_enable>on</stats_enable>
+			<stats_port>2200</stats_port>
+			<stats_refresh>10</stats_refresh>
+		</config>
+		<ha_backends>
+			<item>
+				<name>be_webapp</name>
+				<stats_enabled>yes</stats_enabled>
+				<lbmode>roundrobin</lbmode>
+				<ha_servers>
+					<item>
+						<name>web_01</name>
+						<address>10.0.20.100</address>
+						<port>80</port>
+						<check>yes</check>
+					</item>
+				</ha_servers>
+			</item>
+		</ha_backends>
+	</haproxy>
+</pfsense>
