@@ -1,0 +1,14 @@
+# Secrets and Keys
+*.key
+*.pem
+*.psk
+.env
+secrets/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Backups
+*.bak
+*.old
