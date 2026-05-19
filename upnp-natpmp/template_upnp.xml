@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<pfsense>
+	<version>23.4</version>
+	<upnp>
+		<enable>on</enable>
+		<allowpmp>on</allowpmp>
+		<ext_iface>wan</ext_iface>
+		<iface_array>lan</iface_array>
+		<permuser1>allow 1024-65535 10.0.30.50/32 1024-65535</permuser1>
+		<permuser2>deny 0-65535 0.0.0.0/0 0-65535</permuser2>
+	</upnp>
+</pfsense>

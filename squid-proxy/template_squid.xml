@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<pfsense>
+	<version>23.4</version>
+	<squid>
+		<config>
+			<active_interface>lan</active_interface>
+			<transparent_proxy>on</transparent_proxy>
+			<ssl_proxy>on</ssl_proxy>
+			<cache_mem>256</cache_mem>
+			<maximum_objsize>4096</maximum_objsize>
+			<enable_clamav>on</enable_clamav>
+		</config>
+	</squid>
+</pfsense>

@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<pfsense>
+	<version>23.4</version>
+	<ntpd>
+		<interface>lan</interface>
+		<timeservers>0.pfsense.pool.ntp.org 1.pfsense.pool.ntp.org</timeservers>
+		<orphan>12</orphan>
+		<logpeer>on</logpeer>
+		<logsys>on</logsys>
+	</ntpd>
+</pfsense>

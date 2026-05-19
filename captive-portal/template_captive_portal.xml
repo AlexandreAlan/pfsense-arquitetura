@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<pfsense>
+	<version>23.4</version>
+	<captiveportal>
+		<guest_portal>
+			<enable></enable>
+			<interface>opt1</interface>
+			<auth_method>local</auth_method>
+			<idletimeout>30</idletimeout>
+			<hardtimeout>480</hardtimeout>
+			<maxconnections>1</maxconnections>
+			<redirurl></redirurl>
+			<radius_protocol>PAP</radius_protocol>
+			<vouchers_enable></vouchers_enable>
+		</guest_portal>
+	</captiveportal>
+</pfsense>

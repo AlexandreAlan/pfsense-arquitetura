@@ -84,6 +84,17 @@ graph TD
 | [`/scripts`](./scripts) | Scripts de automação e sanitização. |
 | [`/ansible`](./ansible) | Playbooks para automação via IaC. |
 | [`/lab-guides`](./lab-guides) | Guia de montagem de ambiente de teste. |
+| [`/captive-portal`](./captive-portal) | Gestão de acesso Guest e Vouchers. |
+| [`/squid-proxy`](./squid-proxy) | Proxy de caching e filtragem web. |
+| [`/ntp-server`](./ntp-server) | Sincronização de tempo (NTP). |
+| [`/snmp`](./snmp) | Monitoramento via protocolo SNMP. |
+| [`/dynamic-dns`](./dynamic-dns) | Atualização automática de DNS dinâmico. |
+| [`/freeradius`](./freeradius) | Servidor RADIUS para autenticação 802.1X. |
+| [`/vlan-management`](./vlan-management) | Definição e segmentação de VLANs. |
+| [`/upnp-natpmp`](./upnp-natpmp) | Automação de abertura de portas. |
+| [`/multicast-igmp`](./multicast-igmp) | Encaminhamento de Multicast (IPTV). |
+| [`/pppoe-server`](./pppoe-server) | Serviço de autenticação PPPoE. |
+| [`/wake-on-lan`](./wake-on-lan) | Despertar de dispositivos via rede. |
 | [`.github/workflows`](./.github/workflows) | Automação CI/CD (NetDevOps). |
 
 ## 📚 Guias Avançados, Master & Transcendentes

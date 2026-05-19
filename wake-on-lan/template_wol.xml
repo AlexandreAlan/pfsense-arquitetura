@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<pfsense>
+	<version>23.4</version>
+	<wol>
+		<wolentry>
+			<interface>lan</interface>
+			<mac>00:11:22:33:44:55</mac>
+			<descr><![CDATA[SVR-01-Backup]]></descr>
+		</wolentry>
+	</wol>
+</pfsense>

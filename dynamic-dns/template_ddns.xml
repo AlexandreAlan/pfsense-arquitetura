@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<pfsense>
+	<version>23.4</version>
+	<dyndns>
+		<item>
+			<enable>on</enable>
+			<type>cloudflare</type>
+			<interface>wan</interface>
+			<host>vpn.empresa.com</host>
+			<username>cloudflare_email</username>
+			<password><REDACTED_API_TOKEN></password>
+			<descr><![CDATA[Cloudflare DDNS Update]]></descr>
+		</item>
+	</dyndns>
+</pfsense>

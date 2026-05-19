@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<pfsense>
+	<version>23.4</version>
+	<freeradius>
+		<config>
+			<interface>
+				<item>
+					<enable>on</enable>
+					<ipaddr>*</ipaddr>
+					<port>1812</port>
+					<type>auth</type>
+				</item>
+			</interface>
+			<client>
+				<item>
+					<enable>on</enable>
+					<ipaddr>10.0.10.0</ipaddr>
+					<netmask>24</netmask>
+					<sharedsecret>radius_secret</sharedsecret>
+					<descr><![CDATA[Local Network APs]]></descr>
+				</item>
+			</client>
+		</config>
+	</freeradius>
+</pfsense>
