@@ -79,19 +79,24 @@ graph TD
 | [`/ids-ips`](./ids-ips) | Regras do Suricata e modo Inline. |
 | [`/traffic-shaping`](./traffic-shaping) | Limiters FQ_CoDel contra Bufferbloat. |
 | [`/logs-monitoring`](./logs-monitoring) | Coleta de métricas e syslog centralizado. |
+| [`/monitoring/dashboards`](./monitoring/dashboards) | Templates JSON para Grafana Dashboard. |
 | [`/templates`](./templates) | Arquivos XML sanitizados para importação. |
 | [`/scripts`](./scripts) | Scripts de automação e sanitização. |
 | [`/ansible`](./ansible) | Playbooks para automação via IaC. |
 | [`/lab-guides`](./lab-guides) | Guia de montagem de ambiente de teste. |
 
-## 📚 Guias Avançados & Master
+## 📚 Guias Avançados, Master & Lendários
 
 *   [**🔒 Hardening Guide**](./HARDENING.md): Segurança extrema e otimização de kernel.
 *   [**📜 Compliance & Audit**](./COMPLIANCE.md): Padrões PCI-DSS, HIPAA e auditoria.
 *   [**🚑 Troubleshooting Playbook**](./TROUBLESHOOTING.md): Guia de resolução de problemas e diagnósticos.
+*   [**🌪️ Disaster Recovery Plan**](./DISASTER_RECOVERY.md): Plano de recuperação de desastres (DRP).
 *   [**📖 Official Ref. Guide**](./OFFICIAL_DOCUMENTATION.md): Visão geral das funções nativas.
 *   [**🖥️ Virtualization & Cloud**](./VIRTUALIZATION.md): Melhores práticas para Proxmox, ESXi e Nuvem.
 *   [**🛡️ CrowdSec Guide**](./CROWDSEC.md): Implementação de IPS colaborativo.
+*   [**🕸️ Tailscale Mesh VPN**](./TAILSCALE.md): Rede mesh Zero Trust moderna.
+*   [**🏛️ Enterprise Auth**](./ENTERPRISE_AUTH.md): Integração com RADIUS, LDAP e AD.
+*   [**⚙️ Hardware & Sizing**](./HARDWARE_GUIDE.md): Guia de dimensionamento e escolha de NICs.
 *   [**⚡ CLI Cheat Sheet**](./CHEATSHEET.md): Comandos essenciais para Power Users.
 
 ---
