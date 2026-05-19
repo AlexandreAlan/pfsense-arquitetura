@@ -104,5 +104,15 @@ graph TD
 *   [**⚡ CLI Cheat Sheet**](./CHEATSHEET.md): Comandos essenciais para Power Users.
 *   [**🎓 Learning Path**](./LEARNING_PATH.md): Roteiro para certificação e maestria.
 
+## 🧠 Deep Dives Técnicos (Extremo)
+
+Para engenheiros que buscam o domínio total do sistema:
+*   [**⚙️ Core Architecture**](./CORE_ARCHITECTURE_DEEP_DIVE.md): Fluxo de pacotes no kernel e tuning do FreeBSD.
+*   [**📡 DHCP & DNS Deep Dive**](./dhcp-dns/DEEP_DIVE.md): Internais do Kea e performance de Unbound.
+*   [**⚖️ High Availability Deep Dive**](./high-availability/DEEP_DIVE.md): A matemática do CARP e sincronização de estados.
+*   [**🔐 VPN Performance Deep Dive**](./vpn-openvpn/DEEP_DIVE.md): OpenVPN DCO, WireGuard e aceleração de hardware.
+*   [**🚦 Traffic Shaping Deep Dive**](./traffic-shaping/DEEP_DIVE.md): FQ_CoDel, Limiters e mitigação de bufferbloat.
+*   [**🔄 HAProxy & Security Deep Dive**](./haproxy/DEEP_DIVE.md): Anti-DDoS Layer 7 e otimização SSL.
+
 ---
 **Alexandre Basto** · © 2026 · *Infraestrutura como Documentação.*
