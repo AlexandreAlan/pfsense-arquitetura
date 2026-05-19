@@ -1,0 +1,30 @@
+---
+- name: pfSense Core Configuration
+  hosts: firewalls
+  gather_facts: no
+  vars:
+    pfsense_api_user: admin
+    pfsense_api_password: your_password
+
+  tasks:
+    - name: Create Management Aliases
+      pfsense_alias:
+        name: "ADMIN_HOSTS"
+        type: "host"
+        address: "10.0.0.10, 10.0.0.11"
+        descr: "Authorized Admin Workstations"
+        state: present
+
+    - name: Configure DNS Resolver (Unbound)
+      pfsense_unbound_dns:
+        enable: yes
+        dnssec: yes
+        forwarding: yes
+        custom_options: "server: ssl-upstream: yes"
+        state: present
+
+    - name: Ensure SSH is enabled on custom port
+      pfsense_system_ssh:
+        enable: yes
+        port: 2222
+        state: present
