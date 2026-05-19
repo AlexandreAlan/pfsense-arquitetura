@@ -103,6 +103,7 @@ graph TD
 *   [**⚙️ Hardware & Sizing**](./HARDWARE_GUIDE.md): Guia de dimensionamento e escolha de NICs.
 *   [**⚡ CLI Cheat Sheet**](./CHEATSHEET.md): Comandos essenciais para Power Users.
 *   [**🎓 Learning Path**](./LEARNING_PATH.md): Roteiro para certificação e maestria.
+*   [**🗺️ IP Plan Guide**](./IP_PLAN.md): Estratégia de endereçamento e subnets.
 
 ## 🧠 Deep Dives Técnicos (Extremo)
 
