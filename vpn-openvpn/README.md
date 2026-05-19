@@ -1,23 +1,54 @@
-## 💬 OpenVPN (Road Warrior)
+# 🔒 OpenVPN DCO: Acesso Remoto de Alta Performance
 
-Configuração de acesso remoto seguro utilizando certificados digitais e MFA (opcional).
+A partir do pfSense 2.8+, o OpenVPN suporta **DCO (Data Channel Offload)**, movendo o processamento de criptografia do espaço de usuário para o kernel do FreeBSD, resultando em ganhos massivos de throughput.
 
-### 🛠️ Parâmetros do Servidor
-*   **Interface:** WAN
-*   **Protocolo:** UDP on IPv4 Only (Maior performance)
-*   **Device Mode:** tun (Layer 3)
-*   **Porta:** 1194
-*   **Encryption:** AES-256-GCM / SHA256 (Padrão segurança alta)
+## 🚀 Configuração do Servidor (DCO Ready)
 
-### 👥 Configuração de Clientes
-1.  **Auth:** Local User Manager + Certificado Individual.
-2.  **Split Tunneling:** [X] Habilitado (Apenas tráfego interno passa pela VPN).
-3.  **DNS:** Clientes recebem o IP do pfSense para resolução de nomes internos.
+Para utilizar o DCO, certas restrições e configurações específicas devem ser seguidas.
 
-### 🛡️ Checklist de Segurança
-- [ ] TLS Key habilitada e direcional.
-- [ ] Bloqueio de conexões simultâneas por usuário (opcional).
-- [ ] Regras de firewall no `OpenVPN Tab` limitadas aos IPs necessários.
+### ⚙️ Parâmetros do Servidor
+*   **Interface:** WAN (ou IP Virtual CARP).
+*   **Protocolo:** UDP on IPv4 Only.
+*   **Data Channel Offload:** [X] Habilitado.
+*   **Encryption:** `AES-256-GCM` (Obrigatório para DCO).
+*   **Auth:** `SHA256` ou superior.
+*   **Device Mode:** `tun` (Layer 3).
+
+### 👥 Gestão de Clientes & Auth
+1.  **Backend de Autenticação:** Local Database + Certificado ou Integração LDAP/AD com MFA.
+2.  **MFA:** Recomendado o uso do pacote `stunnel` ou integração RADIUS com Microsoft Authenticator/Google Authenticator.
+3.  **Topology:** Subnet (um IP por cliente).
 
 ---
-*Dica: Utilize o pacote `openvpn-client-export` para gerar os arquivos `.ovpn` facilmente.*
+
+## 🛡️ Segurança (Hardening)
+
+*   **TLS Key:** Habilitada e direcional (previne ataques DoS iniciais).
+*   **Renegociação de Chave:** Configurada para 3600 segundos (1 hora).
+*   **Strict No-Log (Opcional):** Para privacidade total, ou Verbosity 3 para auditoria.
+
+---
+
+## 📊 Fluxo de Conexão DCO
+
+```mermaid
+sequenceDiagram
+    participant Client as Usuário (Internet)
+    participant NIC as Driver de Rede (Netmap/DCO)
+    participant Kernel as FreeBSD Kernel
+    participant OVPN as OpenVPN Process (User-space)
+
+    Client->>NIC: Pacote Cifrado (UDP 1194)
+    NIC->>Kernel: Entrega ao Processamento DCO
+    Kernel->>Kernel: Descriptografia (AES-GCM no Kernel)
+    Kernel->>Internal: Entrega do Pacote Descriptografado à LAN
+    Note right of Kernel: Sem troca de contexto User/Kernel
+```
+
+## 🛠️ Checklist de Implementação
+- [ ] Driver de rede compatível com aceleração de kernel.
+- [ ] Exportação de perfil `.ovpn` utilizando o `openvpn-client-export`.
+- [ ] Regras de firewall na interface `OpenVPN` seguindo o Princípio do Menor Privilégio.
+
+---
+*Dica: O OpenVPN DCO não suporta compressão (LZO/LZ4). Desative a compressão para garantir a compatibilidade e performance.*
