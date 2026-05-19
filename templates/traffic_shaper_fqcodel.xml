@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<pfsense>
+	<version>23.4</version>
+	<dnshaper>
+		<queue>
+			<name>WAN_Download</name>
+			<number>1</number>
+			<qlimit></qlimit>
+			<plr></plr>
+			<description><![CDATA[FQ_CoDel Download Limiter]]></description>
+			<bandwidth>
+				<item>
+					<bw>950</bw>
+					<bwunit>Mb</bwunit>
+				</item>
+			</bandwidth>
+			<sched>fq_codel</sched>
+		</queue>
+		<queue>
+			<name>WAN_Upload</name>
+			<number>2</number>
+			<qlimit></qlimit>
+			<plr></plr>
+			<description><![CDATA[FQ_CoDel Upload Limiter]]></description>
+			<bandwidth>
+				<item>
+					<bw>950</bw>
+					<bwunit>Mb</bwunit>
+				</item>
+			</bandwidth>
+			<sched>fq_codel</sched>
+		</queue>
+	</dnshaper>
+</pfsense>

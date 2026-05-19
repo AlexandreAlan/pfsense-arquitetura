@@ -78,6 +78,16 @@ graph TD
 | [`/pfblockerng`](./pfblockerng) | Listas de bloqueio IP/DNS e GeoIP. |
 | [`/ids-ips`](./ids-ips) | Regras do Suricata e modo Inline. |
 | [`/traffic-shaping`](./traffic-shaping) | Limiters FQ_CoDel contra Bufferbloat. |
+| [`/logs-monitoring`](./logs-monitoring) | Coleta de métricas e syslog centralizado. |
+| [`/templates`](./templates) | Arquivos XML sanitizados para importação. |
+| [`/scripts`](./scripts) | Scripts de automação e sanitização. |
+
+## 📚 Guias Avançados
+
+*   [**🔒 Hardening Guide**](./HARDENING.md): Segurança extrema e otimização de kernel.
+*   [**📜 Compliance & Audit**](./COMPLIANCE.md): Padrões PCI-DSS, HIPAA e auditoria.
+*   [**🚑 Troubleshooting Playbook**](./TROUBLESHOOTING.md): Guia de resolução de problemas e diagnósticos.
+*   [**📖 Official Ref. Guide**](./OFFICIAL_DOCUMENTATION.md): Visão geral das funções nativas.
 
 ---
 **Alexandre Basto** · © 2026 · *Infraestrutura como Documentação.*
