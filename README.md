@@ -84,13 +84,17 @@ graph TD
 | [`/scripts`](./scripts) | Scripts de automação e sanitização. |
 | [`/ansible`](./ansible) | Playbooks para automação via IaC. |
 | [`/lab-guides`](./lab-guides) | Guia de montagem de ambiente de teste. |
+| [`.github/workflows`](./.github/workflows) | Automação CI/CD (NetDevOps). |
 
-## 📚 Guias Avançados, Master & Lendários
+## 📚 Guias Avançados, Master & Transcendentes
 
 *   [**🔒 Hardening Guide**](./HARDENING.md): Segurança extrema e otimização de kernel.
 *   [**📜 Compliance & Audit**](./COMPLIANCE.md): Padrões PCI-DSS, HIPAA e auditoria.
 *   [**🚑 Troubleshooting Playbook**](./TROUBLESHOOTING.md): Guia de resolução de problemas e diagnósticos.
 *   [**🌪️ Disaster Recovery Plan**](./DISASTER_RECOVERY.md): Plano de recuperação de desastres (DRP).
+*   [**🏢 SD-WAN Strategy**](./SD_WAN.md): Gestão avançada de links e SLAs.
+*   [**🤖 AI-Driven SecOps**](./AI_SECOPS.md): Uso de IA para análise de logs e resposta.
+*   [**🗺️ Multi-Vendor Interop**](./INTEROP.md): Conectando pfSense com FortiGate, Cisco e outros.
 *   [**📖 Official Ref. Guide**](./OFFICIAL_DOCUMENTATION.md): Visão geral das funções nativas.
 *   [**🖥️ Virtualization & Cloud**](./VIRTUALIZATION.md): Melhores práticas para Proxmox, ESXi e Nuvem.
 *   [**🛡️ CrowdSec Guide**](./CROWDSEC.md): Implementação de IPS colaborativo.
@@ -98,6 +102,7 @@ graph TD
 *   [**🏛️ Enterprise Auth**](./ENTERPRISE_AUTH.md): Integração com RADIUS, LDAP e AD.
 *   [**⚙️ Hardware & Sizing**](./HARDWARE_GUIDE.md): Guia de dimensionamento e escolha de NICs.
 *   [**⚡ CLI Cheat Sheet**](./CHEATSHEET.md): Comandos essenciais para Power Users.
+*   [**🎓 Learning Path**](./LEARNING_PATH.md): Roteiro para certificação e maestria.
 
 ---
 **Alexandre Basto** · © 2026 · *Infraestrutura como Documentação.*

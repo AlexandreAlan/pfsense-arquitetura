@@ -1,0 +1,26 @@
+name: Validate pfSense XML Config
+
+on:
+  push:
+    paths:
+      - 'templates/**.xml'
+      - 'backups/**.xml'
+  pull_request:
+    paths:
+      - 'templates/**.xml'
+      - 'backups/**.xml'
+
+jobs:
+  validate-xml:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Install XML Linter
+        run: sudo apt-get install -y libxml2-utils
+
+      - name: Validate XML Files
+        run: |
+          find . -name "*.xml" -exec xmllint --noout {} +
+          echo "✅ All XML files are structurally sound."
